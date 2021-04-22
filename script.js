@@ -7,12 +7,20 @@ var timeBlockEl = $('#time-block');
 var saveBtn = $('#save-button');
     // hour block
 var hour = $('#time');
+    // text area value
+var textAreaEl = $('#user-input');
+    // value of text area
+var task = textAreaEl.val();
 // STARTING DATA=======================================
 
 // FUNCTIONS===========================================
 // if time of day matches an hour element, change it's class to present
 // if a user writes a note, it is saved until the end of the day
-// 
+function saveTasks() {
+    localStorage.setItem("Daily Tasks", task);
+}
+
+saveBtn.click(saveTasks());
 // USER INTERACTIONS===================================
 
 
