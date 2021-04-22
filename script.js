@@ -6,13 +6,17 @@
  // save button
  var saveBtn = $("save-button");
 
+
 // STARTING DATA=======================================
     // list of text-block objects
+var today = moment();
 var textBlocks = [
     {
         hour: "0900",
+        
     }
 ];
+
 // FUNCTIONS===========================================
 // if time of day matches an hour element, change it's class to present
 // if a user writes a note, it is saved until the end of the day
