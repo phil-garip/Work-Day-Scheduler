@@ -6,7 +6,7 @@ var timeBlockEl = $('#time-block');
     // save button
 var saveBtn = $('#save-button');
     // hour block
-var hourEl = $('#hour');
+var hour = $('#time');
 // STARTING DATA=======================================
 
 // FUNCTIONS===========================================
