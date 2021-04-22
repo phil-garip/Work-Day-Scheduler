@@ -1,25 +1,23 @@
 // DEPENDENCIES========================================
-    // current day p tag
-var currentDayEl = $('#currentDay');
-    // time-block div tag
-var timeBlockEl = $('#time-block');
-    // save button
-var saveBtn = $('#save-button');
-    // hour block
-var hour = $('#time');
-    // text area value
-    // value of text area
-var task = $('#user-input').val();
+ // textarea
+ var userInput = $("textarea");
+ // hour block
+ var hourSlot = $("hour");
+ // save button
+ var saveBtn = $("save-button");
+
 // STARTING DATA=======================================
-    // list of hours?
+    // list of text-block objects
+var textBlocks = [
+    {
+        hour: "0900",
+    }
+];
 // FUNCTIONS===========================================
 // if time of day matches an hour element, change it's class to present
 // if a user writes a note, it is saved until the end of the day
-function saveTasks() {
-    localStorage.setItem("Daily Tasks", task);
-}
 
-saveBtn.on("click", saveTasks());
+
 
 // USER INTERACTIONS===================================
 
