@@ -1,10 +1,6 @@
 // DEPENDENCIES========================================
- // textarea
- var userInput = $("textarea");
- // hour block
- var hourSlot = $("hour");
- // save button
- var saveBtn = $("save-button");
+ //text block container
+ var textBlockContainer = $("#text-block-container");
 
 
 // STARTING DATA=======================================
@@ -12,15 +8,50 @@
 var today = moment();
 var textBlocks = [
     {
-        hour: "0900",
-        
+        hour: "0900"
+    },
+    {
+        hour: "1000"
+    },
+    {
+        hour: "1100"
+    },
+    {
+        hour: "1200"
+    },
+    {
+        hour: "1300"
+    },
+    {
+        hour: "1400"
+    },
+    {
+        hour: "1500"
+    },
+    {
+        hour: "1600"
+    },
+    {
+        hour: "1700"
     }
 ];
 
 // FUNCTIONS===========================================
-// if time of day matches an hour element, change it's class to present
-// if a user writes a note, it is saved until the end of the day
+// dynamically render text blocks
+function renderTextBlocks() {
+    //create timeblock div
+    var timeBlock= $('<div class="time-block row" id="time-block">');
+    var hourBlock = $('<div class="hour col-sm-1" id="hour">');
+    var textArea = $('<textarea id="user-input" class="future col-sm-10" placeholder="Add Event">');
+    var button = $('<button class="saveBtn col-sm-1" id="save-button">');
+    
+    //add components to timeBlock
+    timeBlock.append(hourBlock, textArea, button);
+    //add timeblock to page
+    textBlockContainer.append(timeBlock);
+}
 
+renderTextBlocks();
 
 
 // USER INTERACTIONS===================================
