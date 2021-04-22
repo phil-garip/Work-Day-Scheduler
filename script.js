@@ -8,9 +8,8 @@ var saveBtn = $('#save-button');
     // hour block
 var hour = $('#time');
     // text area value
-var textAreaEl = $('#user-input');
     // value of text area
-var task = textAreaEl.val();
+var task = $('#user-input').val();
 // STARTING DATA=======================================
 
 // FUNCTIONS===========================================
@@ -20,7 +19,7 @@ function saveTasks() {
     localStorage.setItem("Daily Tasks", task);
 }
 
-saveBtn.click(saveTasks());
+saveBtn.on("click", saveTasks());
 
 // USER INTERACTIONS===================================
 
