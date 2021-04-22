@@ -10,8 +10,9 @@ var hour = $('#time');
 // STARTING DATA=======================================
 
 // FUNCTIONS===========================================
-    // if time of day matches an hour element, change it's class to present
-    
+// if time of day matches an hour element, change it's class to present
+// if a user writes a note, it is saved until the end of the day
+// 
 // USER INTERACTIONS===================================
 
 
