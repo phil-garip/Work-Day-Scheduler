@@ -11,7 +11,7 @@ var hour = $('#time');
     // value of text area
 var task = $('#user-input').val();
 // STARTING DATA=======================================
-
+    // list of hours?
 // FUNCTIONS===========================================
 // if time of day matches an hour element, change it's class to present
 // if a user writes a note, it is saved until the end of the day
