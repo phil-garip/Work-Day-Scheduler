@@ -80,7 +80,7 @@ function renderTextBlocks() {
         dailyTasks.push(($(this).siblings("textArea").val()));
         localStorage.setItem("Data", dailyTasks);
        }
-
+    }
     };
     
     
