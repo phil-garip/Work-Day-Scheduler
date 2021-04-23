@@ -40,7 +40,7 @@ var hourBlocks = [
 ];
 
 // FUNCTIONS===========================================
-// dynamically render text blocks
+// render text blocks
 function renderTextBlocks() {
     // loop through objects
     for(i=0; i<hourBlocks.length; i++) {
@@ -66,10 +66,6 @@ function renderTextBlocks() {
         } else {
             textArea.attr("class", "future col-sm-10");
         }
-
-        console.log(hourBlocks[5].hour);
-        
-
         
     }
 
