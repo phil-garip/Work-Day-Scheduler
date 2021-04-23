@@ -11,31 +11,31 @@
 var today = moment();
 var hourBlocks = [
     { 
-        hour: "09"
+        hour: 09
     },
     {
-        hour: "10"
+        hour: 10
     },
     {
-        hour: "11"
+        hour: 11
     },
     {
-        hour: "12"
+        hour: 12
     },
     {
-        hour: "13"
+        hour: 13
     },
     {
-        hour: "14"
+        hour: 14
     },
     {
-        hour: "15"
+        hour: 15
     },
     {
-        hour: "16"
+        hour: 16
     },
     {
-        hour: "17"
+        hour: 17
     }
 ];
 
@@ -59,15 +59,15 @@ function renderTextBlocks() {
         textBlockContainer.append(timeBlock);
 
         // change color of text area based on time using moment
-        if (today.hour() == currentHour) {
+        if (today.hour() === currentHour) {
             textArea.attr("class", "present col-sm-10");
         } else if (today.hour() > currentHour) {
-            textArea.attr("class", "future col-sm-10");
-        } else {
             textArea.attr("class", "past col-sm-10");
+        } else {
+            textArea.attr("class", "future col-sm-10");
         }
 
-        console.log(today.hour());
+        console.log(hourBlocks[5].hour);
         
 
         
