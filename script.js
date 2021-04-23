@@ -7,7 +7,7 @@
     // list of text-block objects
 var today = moment();
 var textBlocks = [
-    {
+    { 
         hour: "0900"
     },
     {
