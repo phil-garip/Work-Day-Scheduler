@@ -1,6 +1,6 @@
 // DEPENDENCIES========================================
 
-const moment = require("moment");
+//const moment = require("moment");
 
  //text block container
  var textBlockContainer = $("#text-block-container");
@@ -44,16 +44,31 @@ var hourBlocks = [
 function renderTextBlocks() {
     // loop through objects
     for(i=0; i<hourBlocks.length; i++) {
+        //translate time using moment
+        var currentHour = hourBlocks[i].hour
+        var dayTime = moment(hourBlocks[i].hour, "HH").format("h A");
+
         // create elements
-        var hourBlock = $('<div class="hour col-sm-1" id="hour">').text(hourBlocks[i].hour);
+        var hourBlock = $('<div class="hour col-sm-1" id="hour">').text(dayTime);
         var timeBlock= $('<div class="time-block row" id="time-block">');
         var textArea = $('<textarea id="user-input" class="future col-sm-10" placeholder="Add Event">');
         var button = $('<button class="saveBtn col-sm-1" id="save-button">').text("save");
+
         //append elements to each other and then to the page
         timeBlock.append(hourBlock, textArea, button);
         textBlockContainer.append(timeBlock);
-        //translate time using moment
-        moment(hourBlock).format()
+
+        // change color of text area based on time using moment
+        if (today.hour() == currentHour) {
+            textArea.attr("class", "present col-sm-10");
+        } else if (today.hour() > currentHour) {
+            textArea.attr("class", "future col-sm-10");
+        } else {
+            textArea.attr("class", "past col-sm-10");
+        }
+
+        console.log(today.hour());
+        
 
         
     }
