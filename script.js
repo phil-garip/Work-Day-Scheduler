@@ -73,14 +73,14 @@ function renderTextBlocks() {
     
     }
     
-    $(".saveBtn").on("click", saveData);
-    function saveData () {
-        for(i=0; i<hourBlocks.length; i++) {
-        var dailyTasks = [];
-        dailyTasks.push(($(this).siblings("textArea").val()));
-        localStorage.setItem("Data", dailyTasks);
-       }
-    }
+    // $(".saveBtn").on("click", saveData);
+    // function saveData () {
+    //     for(i=0; i<hourBlocks.length; i++) {
+    //     var dailyTasks = [];
+    //     dailyTasks.push(($(this).siblings("textArea").val()));
+    //     localStorage.setItem("Data", dailyTasks);
+    //    }
+    // }
     };
     
     
