@@ -66,38 +66,26 @@ function renderTextBlocks() {
         } else {
             textArea.attr("class", "future col-sm-10");
         }
+
         
+    function saveData () {
+         var dailyTasks = [];
+         dailyTasks.push(($(this).siblings("textArea").val()));
+         localStorage.setItem("Data", dailyTasks);
+        }
     }
-
     
-    //create timeblock div
-    // var hourBlock = $('<div class="hour col-sm-1" id="hour">');
-    // var timeBlock= $('<div class="time-block row" id="time-block">');
-    // var textArea = $('<textarea id="user-input" class="future col-sm-10" placeholder="Add Event">');
-    // var button = $('<button class="saveBtn col-sm-1" id="save-button">');
+    $(".saveBtn").on("click", saveData);
+
+
+    };
     
     
 
-    //add components to timeBlock
-    // timeBlock.append(textArea, button. hourBlock);
 
-    // //add timeblock to page
-    // textBlockContainer.append(timeBlock);
-}
+
+// initializations
+
+
 
 renderTextBlocks();
-
-
-// USER INTERACTIONS===================================
-
-
-
-
-
-// USER STORY
-//when a user logs on
-//they can add tasks and events to each hour of the workday
-//and those tasks will be saved locally
-//future rows will be green
-//row that holds current hour will be red
-//rows from hours past will turn gray
