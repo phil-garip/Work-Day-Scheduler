@@ -42,6 +42,8 @@ var hourBlocks = [
 // FUNCTIONS===========================================
 // render text blocks
 function renderTextBlocks() {
+    //get saved items
+    localStorage.getItem("data");
     // loop through objects
     for(i=0; i<hourBlocks.length; i++) {
         //translate time using moment
@@ -68,15 +70,16 @@ function renderTextBlocks() {
         }
 
         
-    function saveData () {
-         var dailyTasks = [];
-         dailyTasks.push(($(this).siblings("textArea").val()));
-         localStorage.setItem("Data", dailyTasks);
-        }
+    
     }
     
     $(".saveBtn").on("click", saveData);
-
+    function saveData () {
+        for(i=0; i<hourBlocks.length; i++) {
+        var dailyTasks = [];
+        dailyTasks.push(($(this).siblings("textArea").val()));
+        localStorage.setItem("Data", dailyTasks);
+       }
 
     };
     
