@@ -1,9 +1,9 @@
 // DEPENDENCIES========================================
 
-//const moment = require("moment");
-
  //text block container
  var textBlockContainer = $("#text-block-container");
+ var dateToday = moment().format("MMM Do, YYYY");
+ $("#currentDay").text(dateToday);
 
 
 // STARTING DATA=======================================
