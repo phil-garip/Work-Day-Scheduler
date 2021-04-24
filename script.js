@@ -88,7 +88,7 @@ function renderTextBlocks() {
         }
 
         var dailyTasksString = JSON.stringify(dailyTasksArray);
-        dailyTasks.push(userInput);
+        dailyTasksArray.push(userInput);
         window.localStorage.setItem("Data", dailyTasksString);
        }
     }
