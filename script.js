@@ -72,6 +72,12 @@ function renderTextBlocks() {
         
     
     }
+
+    function clearLocalStorage() {
+        if (today.hour === 24) {
+            localStorage.clear();
+        }
+    }
     
     // $(".saveBtn").on("click", saveData);
     // function saveData () {
@@ -81,6 +87,8 @@ function renderTextBlocks() {
     //     localStorage.setItem("Data", dailyTasks);
     //    }
     // }
+
+    clearLocalStorage();
     };
     
     
