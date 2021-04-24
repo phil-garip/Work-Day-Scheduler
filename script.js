@@ -43,7 +43,18 @@ var hourBlocks = [
 // render text blocks
 function renderTextBlocks() {
     //get saved items
-    localStorage.getItem("data");
+    function showNotes() {
+        var savedTasks = localStorage.getItem("Data");
+        if (savedTasks === null) {
+            return;
+        }
+        var storedTasks = JSON.parse(savedTasks);
+
+        for (i=0; i < storedTasks.length; i++) {
+            userInput.val(savedTasks);
+        }
+    }
+    
     // loop through objects
     for(i=0; i<hourBlocks.length; i++) {
         //translate time using moment
